@@ -1,6 +1,6 @@
 <?php 
 
-	ini_set('display_errors', 1); //displays errors FOR TESTING ONLY
+	//ini_set('display_errors', 1); //displays errors FOR TESTING ONLY
 
 	$dsn = 'mysql:dbname=cdg9;host=sql2.njit.edu';
 	$username = 'cdg9';
