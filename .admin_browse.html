@@ -10,8 +10,8 @@
 <div id="browseResults"></div>
 <script>
 	function displayResults(str) {
-		var xhr = new XMLHttpRequest();
-		var param = {'browse' : str};
+		const xhr = new XMLHttpRequest();
+		const param = {'browse' : str};
 		console.log(param);
 		if (str == "") {
 			document.getElementById('browseResults').innerHTML = '';
