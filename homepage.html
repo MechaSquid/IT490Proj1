@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<Doctype html>
 <html>
 
 
@@ -54,27 +54,29 @@
     
       <img src="airplane.jpg" alt="airplane image">
       <br><br><br>
+      
+ 
      
     <div class=forms>
-      <form>
+      <form action='flightResults.php' method='post'>
         <fieldset id="f1"><a name="search_by_destination"></a>
           <legend>Search by destination</legend>
           
           <label class="From">From</label>
           <select name="flight_from">
             <option value="" selected disabled>Please select an option...</option>
-            <option value="1">New Jersey</option>
-            <option value="2">New York</option>
-            <option value="3">Maryland</option>
+            <option>New Jersey</option>
+            <option>New York</option>
+            <option>Maryland</option>
           </select>
           &nbsp;&nbsp;&nbsp;&nbsp;
           
           <label class="To">To</label>
           <select name="flight_to">
             <option value="" selected disabled>Please select an option...</option>
-            <option value="1">New Jersey</option>
-            <option value="2">New York</option>
-            <option value="3">Maryland</option>
+            <option>New Jersey</option>
+            <option>New York</option>
+            <option>Maryland</option>
           </select>
           &nbsp;&nbsp;&nbsp;&nbsp;
           
@@ -85,28 +87,34 @@
           <br><br><br><br><br><br><br><br><br>
           
           <label class="Depart">Depart</label>
-            <input type = "date"  name="Depart_date" required> &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type = "date"  name="Depart_date" > &nbsp;&nbsp;&nbsp;&nbsp;
           <label class="Return">Return</label>
             <input type="date" name="Return_date">
             <br><br><br><br><br><br><br>
             
             <label class="submit_button"</label>
-            <input type = submit value="Search" id="flight_by_destination">
+            <input type = submit value="Search" name="flight_search">
+            
         </fieldset>
       </form>
         
-      <form>
+        
+    
+        
+      <form action='cargoResults.php'>
         <fieldset id="f2"><a name="search_by_cargo"></a>
           <legend>Search by cargo</legend>
           <p>Find which flight is carrying your cargo</p>
           
           <label class="Cargo">Cargo ID</label>
-          <input type = text  name="Cargo_ID" maxlength="4" autocomplete="off" required>
-          <input type = submit value="Search" id="search_by_cargo">
+          <input type = text  name="Cargo_ID" maxlength="4" autocomplete="off" placeholder="Enter Cargo ID here" required>
+          <input type = submit value="Search" name="cargo_search">
           <br><br><br><br><br><br><br>  
        </form>
     
     </div>
 	</div>
+ 
+
 </body>
 </html>
