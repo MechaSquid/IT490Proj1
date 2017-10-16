@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	$_SESSION['logged_in'] = true; // for testing only
 	if ($_SESSION['logged_in']) {
 		$dsn = 'mysql:dbname=cdg9;host=sql2.njit.edu';
 		$username = 'cdg9';
