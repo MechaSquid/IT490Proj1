@@ -5,11 +5,19 @@
 	$request = json_decode($request_body);
 	switch ($request->request) {
 		case 'origin':
-			# code...
+			$stmt = $conn->prepare("SELECT `To_airport` FROM `Flight`");
+			$stmt->execute();
+			while ($row = $stmt->fetch()) {
+				echo '<option value="'.$row[0].'">';
+			}
 			break;
 
 		case 'destination':
-			# code...
+			$stmt = $conn->prepare("SELECT `From_airport` FROM `Flight`");
+			$stmt->execute();
+			while ($row = $stmt->fetch()) {
+				echo '<option value="'.$row[0].'">';
+			}
 			break;
 	}
 ?>

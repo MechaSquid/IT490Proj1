@@ -26,11 +26,10 @@
 		const xhr = new XMLHttpRequest();
 		const param = {"request": e};
 		const id = e + 's';
-		xhr.open('POST','.admin_search_script.php');
+		xhr.open('POST','.admin_search_update_script.php');
 		xhr.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
-				//document.getElementById(id).innerHTML = this.responseText;
-				console.log(this.responseText);
+				document.getElementById(id).innerHTML = this.responseText;
 			}
 		}
 		xhr.send(JSON.stringify(param));
