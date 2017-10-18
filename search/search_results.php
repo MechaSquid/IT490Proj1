@@ -32,11 +32,40 @@
 	
 	$stmt = $conn->prepare($sql);
 	$stmt->execute();
-	// while statement to fetch row
-
-	// SELECT 
-	// $col
-	// `Flight_number`, `Operating_aircraft` FROM `Flight` WHERE 
-	// $cond
-	// `Flight_number`='JB237' AND `Operating_aircraft`='FT494' 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flight Search Results</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Flight Number</th>
+			<th>Tail Number</th>
+			<th>Air Crew</th>
+			<th>Destination</th>
+			<th>Origin</th>
+			<th>Cargo Carried</th>
+			<th>Departure Time</th>
+			<th>Arrival Time</th>
+		</tr>
+	<?php
+		while ($row = $stmt->fetch()) {
+			echo '<tr>';
+			echo '<td>'.$row[0].'</td>';
+			echo '<td>'.$row[1].'</td>';
+			echo '<td>'.$row[2].'</td>';
+			echo '<td>'.$row[3].'</td>';
+			echo '<td>'.$row[4].'</td>';
+			echo '<td>'.$row[5].'</td>';
+			echo '<td>'.$row[6].'</td>';
+			echo '<td>'.$row[7].'</td>';
+			echo '</tr>';
+		}
+	?>
+	</table>
+</body>
+</html>
+<?php
