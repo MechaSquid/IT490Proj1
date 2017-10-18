@@ -1,4 +1,4 @@
-function pullChoices(e) {
+function pullFlightChoices(e) {
 	const xhr = new XMLHttpRequest();
 	const param = {"request": e};
 	const id = e + 's';
@@ -9,4 +9,15 @@ function pullChoices(e) {
 		}
 	}
 	xhr.send(JSON.stringify(param));
+}
+// function insertAircraft() {
+// 	const tail = document.getElementById('tail-number').value;
+// 	const airtype = document.getElementById('aircraft-type').value;
+// 	const fuel = document.getElementById('fuel-amount').value;
+// 	const xhr = new XMLHttpRequest();
+// }
+function confirmDelete(e) {
+	if (confirm("Are you sure you want to DELETE?")) {
+		e.submit();
+	}
 }
