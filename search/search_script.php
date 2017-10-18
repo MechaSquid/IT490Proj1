@@ -28,7 +28,7 @@
 		$cond .= "`Air_crew`"."='".$_POST['crew-id']."'";
 	}
 
-	$sql = 'SELECT ' .str_replace("``", "`, `", $col). ' FROM `Flight` WHERE ' .str_replace("'`", "' AND `", $cond);
+	$sql = 'SELECT * FROM `Flight` WHERE ' .str_replace("'`", "' AND `", $cond);
 	
 	$stmt = $conn->prepare($sql);
 	$stmt->execute();
