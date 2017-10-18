@@ -15,10 +15,6 @@
 <h2>Search</h2>
 <ul>
 	<li><a href="./search/flight_search.php">Flight Number</a></li>
-	<li><a href="./search/tail_number.php">Tail Number</a></li>
-	<li><a href="./search/origin.php">Origin</a></li>
-	<li><a href="./search/destination.php">Destination</a></li>
-	<li><a href="./search/crew_id.php">Crew ID</a></li>
 </ul>
 
 <h2>Add/Edit/Delete</h2>
