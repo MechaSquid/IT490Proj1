@@ -100,7 +100,16 @@
         </tr>";
         
         
-  $testQuery = "SELECT * FROM Flight WHERE From_airport LIKE '$from' && To_airport LIKE '$to'";
+ $testQuery = "
+ 		SELECT Flight_number, Operating_aircraft, Air_crew, To_airport, From_airport, Cargo_carried, Departure_time, Arrival_time
+		FROM Flight 
+		JOIN Airport AS dst
+		ON To_airport=dst.Airport_Code
+		JOIN Airport AS org
+		ON From_airport=org.Airport_Code
+		WHERE dst.State_Abbrev = '$to'
+		AND org.State_Abbrev = '$from'
+";
   $testResult = mysql_query($testQuery);
   
   while($a = mysql_fetch_array($testResult))
