@@ -45,9 +45,9 @@
        
       <div class="nav_bar">
         <ul>
-          <li><a href="homepage.html">Flight Search</a></li>
-  	      <li><a href="homepage.html">Cargo Search</a></li>
-   		    <li><a href="#admin">Admin login</a></li>
+          <li><a href="https://web.njit.edu/~az66/download">Flight Search</a></li>
+  	      <li><a href="https://web.njit.edu/~az66/download">Cargo Search</a></li>
+   		    <li><a href="https://web.njit.edu/~az66/download">Admin login</a></li>
         </ul>
       </div>
 
@@ -60,9 +60,6 @@
 
 
   $cargo_ID = $_GET['Cargo_ID'];
-  echo"<br><b>Here is the flight carrying the cargo: $cargo_ID</b><br>";
-
-
 
   //connect to DB
   $hostname = "sql2.njit.edu"   ;
@@ -78,10 +75,21 @@
   $db_selected = mysql_select_db($project);
   if ($db_selected)
   {
-    print("connected to DB<br>");
+    //print("connected to DB<br>");
   }
   
+  //query to DB
+  $testQuery = "SELECT * FROM Flight WHERE Cargo_carried LIKE '$cargo_ID'";
+  $testResult = mysql_query($testQuery);
   
+if (mysql_num_rows($testResult)==0)
+{
+  echo"<br><b>Sorry, we do not have any flights carrying that cargo.</b>";
+
+}
+else
+{
+   echo"<br><b>Here is the flight carrying the cargo: $cargo_ID</b><br>";
   //make table
   echo"<br><table width='600' border='1' cellpadding='1' cellspacing='1'>";
   echo"<tr> 
@@ -97,9 +105,6 @@
   
   
   
-  $testQuery = "SELECT * FROM Flight WHERE Cargo_carried LIKE '$cargo_ID'";
-  $testResult = mysql_query($testQuery);
-  
   while($a = mysql_fetch_array($testResult))
   {
     echo"<tr>";
@@ -112,9 +117,17 @@
     echo"<td>".$a['Departure_time']. "</td>";
     echo"<td>".$a['Arrival_time']. "</td>";
     
+    
+
+    
     echo"</tr>";
   }
   
   echo"</table>";
- 
+  
+  
+}
+  
+  
+  
 ?>
