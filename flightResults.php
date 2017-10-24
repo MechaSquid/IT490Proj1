@@ -1,3 +1,5 @@
+
+
 <html>
 
 
@@ -45,9 +47,9 @@
        
       <div class="nav_bar">
         <ul>
-          <li><a href="homepage.html">Flight Search</a></li>
-  	      <li><a href="homepage.html">Cargo Search</a></li>
-   		    <li><a href="#admin">Admin login</a></li>
+          <li><a href="https://web.njit.edu/~az66/download">Flight Search</a></li>
+  	      <li><a href="https://web.njit.edu/~az66/download">Cargo Search</a></li>
+   		    <li><a href="https://web.njit.edu/~az66/download">Admin login</a></li>
         </ul>
       </div>
 
@@ -58,14 +60,9 @@
 
 
 <?php
-
-
   $from = $_POST['flight_from'];
   $to = $_POST['flight_to'];
-  echo "<br><b>Here are available flights from $from to $to</b><br>";
-
-
-
+  
   //connect to DB
   $hostname = "sql2.njit.edu"   ;
   $username = "cdg9" ;
@@ -80,12 +77,35 @@
   $db_selected = mysql_select_db($project);
   if ($db_selected)
   {
-    print("connected to DB<br>");
+    //print("connected to DB<br>");
   }
   
-
   
+  //query to DB
+          
+ $testQuery = "
+ 		SELECT Flight_number, Operating_aircraft, Air_crew, To_airport, From_airport, Cargo_carried, Departure_time, Arrival_time
+		FROM Flight 
+		JOIN Airport AS dst
+		ON To_airport=dst.Airport_Code
+		JOIN Airport AS org
+		ON From_airport=org.Airport_Code
+		WHERE dst.State_Abbrev = '$to'
+		AND org.State_Abbrev = '$from'
+";
+  $testResult = mysql_query($testQuery);
+  
+  
+  //see if any results
+  
+if (mysql_num_rows($testResult)==0)
+{
+  echo "<br><b>Sorry no available flights from $from to $to</b>";
+} 
+else
+{
 
+   echo "<br><b>Here are available flights from $from to $to</b><br>";
   //make table
   echo"<br><table width='600' border='1' cellpadding='1' cellspacing='1'>";
   echo"<tr> 
@@ -99,18 +119,7 @@
             <th> Arrival_time </th> 
         </tr>";
         
-        
- $testQuery = "
- 		SELECT Flight_number, Operating_aircraft, Air_crew, To_airport, From_airport, Cargo_carried, Departure_time, Arrival_time
-		FROM Flight 
-		JOIN Airport AS dst
-		ON To_airport=dst.Airport_Code
-		JOIN Airport AS org
-		ON From_airport=org.Airport_Code
-		WHERE dst.State_Abbrev = '$to'
-		AND org.State_Abbrev = '$from'
-";
-  $testResult = mysql_query($testQuery);
+
   
   while($a = mysql_fetch_array($testResult))
   {
@@ -128,11 +137,15 @@
   }
   
   echo"</table>";
-  
-if($_GET['flight_search'])
-  print "Here is list of flights";
-  
+}
+
+
+
 print"<br><br>";
 
 
 ?>
+
+
+
+
