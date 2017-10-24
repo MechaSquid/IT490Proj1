@@ -8,6 +8,7 @@ html{
 	div.container{
 		
  		background-color: #eee;
+    min-width:600px;
 	
 		
 	}
