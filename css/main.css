@@ -40,7 +40,10 @@ div.container{
 
 
 }
-	h1:hover{
+.header:hover{
+    text-decoration:none;
+}
+a:hover{
 		text-decoration:none;
 		
 	}
@@ -71,7 +74,7 @@ div.container{
    li a 
       {
       float:left;
-      width:30%;
+      width:33.33%;
       margin:auto;
       display:inline-block;
 	    text-align:center;       
