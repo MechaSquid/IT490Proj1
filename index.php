@@ -28,7 +28,7 @@
     
       <img id="banner" src="images/banner.jpg" alt="airplane image">
       
-      
+      <hr>
  
     <div class="container">  
     	<div class="row justify-content-center">
@@ -190,9 +190,14 @@
           </div>
           		
        </form>
+       
     </div>
 </div>
+</div>
 
+<div id="footer">
+  <span>Created By: Anas Zuberi, Christopher Gately, Edward Carbonaro, Karim Dallas-Newell, Theresa Wagner </span>
+</div>
 
 </body>
 </html>

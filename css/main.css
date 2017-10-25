@@ -129,12 +129,22 @@ a:hover{
    }
 
     #banner{
-      height:250px;
+      height:260px;
+      margin-top:-20px;
     
 }
 
   #mainContainer{
     border:2px solid black;
     min-width:600px;
+    padding:0px;
   
+}
+#footer{
+  text-align:center;
+  position:absolute;
+  bottom:0px;
+  color:white;
+
+
 }
