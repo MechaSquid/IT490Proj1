@@ -63,6 +63,7 @@
 }
 
 html {
+  background-color:#5f6d84;
   box-sizing: border-box;
   font-family: sans-serif;
   line-height: 1.15;
@@ -87,13 +88,14 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 }
 
 body {
+  background-color:#5f6d84;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
   color: #212529;
-  background-color: #fff;
+  
 }
 
 [tabindex="-1"]:focus {

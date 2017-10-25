@@ -5,24 +5,28 @@
 	<title>Wrong Way Airlines Home Page</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css"> 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"> 
+  <link href="https://fonts.googleapis.com/css?family=Hind|Passion+One" rel="stylesheet">
 </head>
 
 <body>
-	<div class="container">
- 
+	<div class="container" id="mainContainer">
+	
+ <a href="https://web.njit.edu/~ejc23/download/it490_edward/IT490Proj1/">
     <div class="header">
-	   <h1>Wrong Way Airlines</h1>
+	   <h1>Wrong Way Airlines</h1>   
 	  </div>
-     
+ </a>
+
+ 
     <div class="nav_bar">
-      <ul>
+      <ul>      
         <li><a href="#search_by_destination">Flight Search</a></li>
 	      <li><a href="#search_by_cargo">Cargo Search</a></li>
- 		    <li><a href="#admin">Admin login</a></li>
-      </ul>
+ 		    <li><a href="#admin">Admin login</a></li>      
+      </ul>  
     </div>
     
-      <!-- <img src="airplane.jpg" alt="airplane image"> -->
+      <img id="banner" src="images/banner.jpg" alt="airplane image">
       
       
  
@@ -153,7 +157,7 @@
 
           <div class="row justify-content-center">
           <label class="Number of Passengers">Number of passengers</label>
-            <input type="number" name="number_of_passengers" min="1" max="255" value="1">
+            <input id="smallInput" type="number" name="number_of_passengers" min="1" max="255" value="1">
           </div>
           
          
