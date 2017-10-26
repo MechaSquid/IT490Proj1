@@ -22,7 +22,7 @@
       <ul>      
         <li><a href="#search_by_destination">Flight Search</a></li>
 	      <li><a href="#search_by_cargo">Cargo Search</a></li>
- 		    <li><a href="#admin">Admin login</a></li>      
+ 		    <li><a href="admin_func.inc.php">Admin login</a></li>      
       </ul>  
     </div>
     
