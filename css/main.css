@@ -145,6 +145,11 @@ a:hover{
   position:relative;
   bottom:0px;
   color:white;
-
-
 }
+
+table,th,td,tr{  
+  border:1px solid black;
+}
+
+
+

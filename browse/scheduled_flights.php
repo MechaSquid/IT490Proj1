@@ -19,8 +19,28 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Aircraft Results</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css"> 
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"> 
+  <link href="https://fonts.googleapis.com/css?family=Hind|Passion+One" rel="stylesheet">
 </head>
 <body>
+	<div class="container" id="mainContainer">
+	
+ <a href="https://web.njit.edu/~ejc23/download/it490_edward/IT490Proj1/" style="text-decoration:none;">
+    <div class="header">
+	   <h1>Wrong Way Airlines</h1>   
+	  </div>
+ </a>
+
+ 
+    <div class="nav_bar">
+      <ul>      
+        <li><a href="../index.php">Flight Search</a></li>
+	      <li><a href="../index.php">Cargo Search</a></li>
+ 		    <li><a href="../admin_func.inc.php">Admin login</a></li>      
+      </ul>  
+    </div>
+ <div class="container">
 	<table>
 		<tr>
 			<th>Flight #</th>
@@ -47,6 +67,7 @@
 			}
 		?>
 	</table>
+ </div>
 </body>
 </html>
 
