@@ -33,7 +33,6 @@
  
     <div class="container">  
     	<div class="row justify-content-center">
-<?php require './admin_func.inc.php' ?>
      		 <form action='flightResults.php' method='post'>
         	 <fieldset id="f1"><a name="search_by_destination"></a>
              <legend><b>Search by destination</b></legend>
@@ -195,6 +194,7 @@
        
     </div>
 </div>
+<?php require './admin_func.inc.php' ?>
 </div>
 
 <div id="footer">
