@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +23,7 @@
       <ul>      
         <li><a href="#search_by_destination">Flight Search</a></li>
 	      <li><a href="#search_by_cargo">Cargo Search</a></li>
- 		    <li><a href="admin_func.inc.php">Admin login</a></li>      
+ 		    <li><a href="login.html">Admin login</a></li>    
       </ul>  
     </div>
     
@@ -32,6 +33,7 @@
  
     <div class="container">  
     	<div class="row justify-content-center">
+<?php require './admin_func.inc.php' ?>
      		 <form action='flightResults.php' method='post'>
         	 <fieldset id="f1"><a name="search_by_destination"></a>
              <legend><b>Search by destination</b></legend>
