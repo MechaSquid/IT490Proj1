@@ -1,35 +1,5 @@
-<html>
-<head>
-	<title>Wrong Way Airlines Home Page</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css"> 
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"> 
-  <link href="https://fonts.googleapis.com/css?family=Hind|Passion+One" rel="stylesheet">
-</head>
-  
-  
-  <body>
-  	<div class="container">
-   
-       <a href="https://web.njit.edu/~ejc23/download/it490_edward/IT490Proj1/" style="text-decoration:none;">
-    <div class="header">
-	   <h1>Wrong Way Airlines</h1>   
-	  </div>
- </a>
-       
-      <div class="nav_bar">
-        <ul>
-          <li><a href="https://web.njit.edu/~ejc23/download/it490_edward/IT490Proj1/index.php">Flight Search</a></li>
-  	      <li><a href="https://web.njit.edu/~ejc23/download/it490_edward/IT490Proj1/index.php">Cargo Search</a></li>
-   		    <li><a href="https://web.njit.edu/~ejc23/download/it490_edward/IT490Proj1/index.php">Admin login</a></li>
-        </ul>
-      </div>
-
-</html>
-
-
 <?php
-	session_start();
-	$_SESSION['logged_in'] = true; // for testing only
+	// session_start();
 	if ($_SESSION['logged_in']) {
 ?>
 
